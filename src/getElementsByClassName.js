@@ -27,6 +27,5 @@ var getElementsByClassName = function(className
     }
   };
   recurThruElements(body);
-  console.log(results);
   return results;
 };

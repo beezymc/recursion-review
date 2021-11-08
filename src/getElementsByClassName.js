@@ -8,7 +8,7 @@ var getElementsByClassName = function(className
 ) {
   var body = document.body;
   var bodyClass = body.className;
-  var bodyClassArray = bodyClass.split(' ');
+  var bodyClassArray = body.classList;
   var results = [];
   for (var i = 0; i < bodyClassArray.length; i++) {
     if (bodyClassArray[i] === className) {
@@ -17,7 +17,7 @@ var getElementsByClassName = function(className
   }
   var recurThruElements = function(node) {
     for (var i = 0; i < node.children.length; i++) {
-      var childClassArray = node.children[i].className.split(' ');
+      var childClassArray = node.children[i].classList;
       for (var j = 0; j < childClassArray.length; j++) {
         if (childClassArray[j] === className) {
           results.push(node.children[i]);
